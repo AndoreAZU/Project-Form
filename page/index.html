@@ -25,7 +25,7 @@
                     <div class="field">
                         <div class="col1">Nama</div>
                         <div class="col2">:</div>
-                        <div class="input_nama col3"><input type="text" placeholder="nama..."> </div>
+                        <div class="input_nama col3"><input type="text" placeholder="nama..." id="nama"> </div>
                     </div>
 
                     <div class="field">
@@ -547,13 +547,17 @@
                 </div>
             </div>
 
-            <div class="button"><button type="submit">Submit</button></div>
+            <div class="button"><button type="submit" onclick="return onSubmit();">Submit</button></div>
 
         </div>
     </form>
     
 </body>
     <style>       
+    
+        body{
+            background-color: darkseagreen
+        }
         .title_form{
             color: aqua;
             font-variant: small-caps;
@@ -562,8 +566,9 @@
         }
         
         .title_row{
-            color: red;
-            background-color: aqua
+            color: whitesmoke;
+            font-size: 1.5em;
+            background-color: black;
         }
         
         .field{
@@ -595,13 +600,18 @@
             margin: 10px;
         }
         
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 1000px) {
             .content{
                 display: contents;
             }
         }
-            
-}
-        
     </style>
+    
+    <script>
+        function onSubmit(){
+            var name = document.getElementById('nama');
+            alert(name.value);
+        }    
+    
+    </script>
 </html>
