@@ -4,10 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!--
     <meta name="description" content="">
     <meta name="author" content="">
--->
 
     <title>Form Registration</title>
 
@@ -23,7 +21,7 @@
             <div class="row">
                 <div class="title_row">Data Pribadi</div>
 
-                <div class="content dua">
+                <div class="content tiga">
                     <div class="field">
                         <div class="col1">Nama</div>
                         <div class="col2">:</div>
@@ -37,7 +35,7 @@
                     </div>
                 </div>
 
-                <div class="content dua">
+                <div class="content tiga">
                     <div class="field">
                         <div class="col1">Tanggal Lahir</div>
                         <div class="col2">:</div>
@@ -110,11 +108,14 @@
                         <div class="input_nama col3"><input type="text" placeholder="Kg.."> </div>
                     </div>
                 </div>
-                <div class="field">
-                    <div class="col1">*Jika Penyandang Cacat (Tuliskan Di Sini)</div>
-                    <div class="col2">:</div>
-                    <div class="input_nama col3">
-                        <textarea></textarea>
+                
+                <div class="content tiga">
+                    <div class="field">
+                        <div class="col1">*Jika Penyandang Cacat (Tuliskan Di Sini)</div>
+                        <div class="col2">:</div>
+                        <div class="input_nama col3">
+                            <textarea></textarea>
+                        </div>
                     </div>
                 </div>
 
@@ -167,7 +168,7 @@
                     </div>
                 </div>
 
-                <div class="content dua">
+                <div class="content tiga">
                     <div class="field">
                         <div class="col1">LinkedIn</div>
                         <div class="col2">:</div>
@@ -244,7 +245,7 @@
                     </div>
                 </div>
 
-                <div class="content dua">
+                <div class="content tiga">
                     <div class="field">
                         <div class="col1">Negara</div>
                         <div class="col2">:</div>
@@ -329,7 +330,7 @@
 
             </div>
 
-            <div class="rowF">
+            <div class="row">
                 <div class="title_row">Pengalaman Kerja</div>
 
                 <div class="content tiga">
@@ -352,7 +353,7 @@
                     </div>
                 </div>
 
-                <div class="content dua">
+                <div class="content tiga">
                     <div class="field">
                         <div class="col1">Tahun Akhir Bekerja</div>
                         <div class="col2">:</div>
@@ -366,7 +367,7 @@
                     </div>
                 </div>
 
-                <div class="content dua">
+                <div class="content tiga">
                     <div class="field">
                         <div class="col1">Jenis Usaha / Industri - Level 1</div>
                         <div class="col2">:</div>
@@ -379,19 +380,21 @@
                         <div class="input_nama col3"><input type="text" placeholder="Kg.."> </div>
                     </div>
                 </div>
-
-                <div class="field">
+                
+                <div class="content tiga">
+                    <div class="field">
                     <div class="col1">Alamat Perusahaan</div>
                     <div class="col2">:</div>
                     <div class="input_nama col3">
                         <textarea></textarea>
                     </div>
                 </div>
+                </div>
             </div>
 
             <div class="row">
                 <div class="title_row">Lowongan Kerja Yang Diinginkan</div>
-                <div class="content dua">
+                <div class="content tiga">
                     <div class="field">
                         <div class="col1">Jenis Usaha / Industri - Level 1</div>
                         <div class="col2">:</div>
@@ -405,7 +408,7 @@
                     </div>
                 </div>
 
-                <div class="content dua">
+                <div class="content tiga">
                     <div class="field">
                         <div class="col1">Gaji Yang Diharapkan</div>
                         <div class="col2">:</div>
@@ -529,7 +532,7 @@
                     </div>
                 </div>
 
-                <div class="content dua">
+                <div class="content tiga">
                     <div class="field">
                         <div class="col1">Penawaran</div>
                         <div class="col2">:</div>
@@ -550,7 +553,7 @@
     </form>
     
 </body>
-    <style>
+    <style>       
         .title_form{
             color: aqua;
             font-variant: small-caps;
@@ -570,17 +573,17 @@
         
         .content{
             display: grid;
-        }
-        
-        .dua{
-            grid-template-columns: 50% auto;
+            width: 100%;
         }
         
         .tiga{
             grid-template-columns: 33% 33% 33%
         }
         
-        
+        .field{
+            display: inline-grid;
+            grid-template-columns: 40% 2% auto;
+        }
         
         .row{
             display: grid;
@@ -591,6 +594,14 @@
             text-align: center;
             margin: 10px;
         }
+        
+        @media only screen and (max-width: 600px) {
+            .content{
+                display: contents;
+            }
+        }
+            
+}
         
     </style>
 </html>
